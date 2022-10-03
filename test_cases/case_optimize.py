@@ -8,8 +8,8 @@ from utils.read import base_data
 
 
 def test_mobile():
-    param = base_data.read_data()["mobile_belong"]
-    result = mobile_query(param)
+    params = base_data.read_data()["mobile_belong"]
+    result = mobile_query(params)
     assert result['status'] == 0
     assert result['msg'] == "ok"
     assert result['result']["shouji"] == "13456755448"
