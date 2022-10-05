@@ -52,8 +52,8 @@ class MysqlDb:
 
 
 db = MysqlDb()
-if __name__ == '__main__':
-    db = MysqlDb()
-    result = db.select_db_one(
-        "select code from users_verifycode where mobile = '15000000000' order by id desc limit 1;")
-    print(result['code'])
+# if __name__ == '__main__':
+#     db = MysqlDb()
+#     result = db.select_db_one(
+#         "select code from users_verifycode where mobile = '15000000000' order by id desc limit 1;")
+#     print(result['code'])

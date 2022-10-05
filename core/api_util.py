@@ -16,4 +16,23 @@ class Api(RestClient):
     def post_data(self, **kwargs):
         return self.post("/posts", **kwargs)
 
+
+    # 以下项目实战的地址
+    def get_code(self, **kwargs):
+        return self.post("/code/", **kwargs)
+
+    def register_mobile(self, **kwargs):
+        return self.post("/users/", **kwargs)
+
+    def user_login(self, **kwargs):
+        return self.post("/login/", **kwargs)
+
+    def shopping_add(self, **kwargs):
+        return self.post("/shopcarts/", **kwargs)
+
+
+    # 查询banner
+    def banner(self, **kwargs):
+        return self.get("/banners/", **kwargs)
+
 api_utils = Api()

@@ -12,7 +12,6 @@ class FileRead:
     def read_data(self):
         f = open(self.data_path, encoding="utf8")
         data = yaml.safe_load(f)
-        print(data['json_data'])
         return data
 
     def read_ini(self):  # 读取ini文件

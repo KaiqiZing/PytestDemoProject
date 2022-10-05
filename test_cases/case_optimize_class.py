@@ -21,6 +21,7 @@ class TestMobile:
     def test_mobile(self):
         params = base_data.read_data()["mobile_belong"]
         result = mobile_query(params)
+        # print(result)
         assert result['status'] == 0
         assert result['msg'] == "ok"
         assert result['result']["shouji"] == "13456755448"
