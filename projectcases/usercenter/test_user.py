@@ -1,8 +1,8 @@
 import allure
 import pytest
 
-from api.user_api import send_code, register, login
-from projectcases.usercenter.conftest import delete_code, get_code, delete_user
+from api.user_api import send_code, register, login, add_shopping_cart
+from projectcases.usercenter.conftest import delete_code, get_code, delete_user, get_shop_cart_num
 from utils.read import base_data
 
 
@@ -41,6 +41,7 @@ class TestUser:
     @allure.story("购物车相关")
     @allure.title("测试用例--购物车添加")
     def test_shopping_cart(self,username, password):
+        #添加购物车流程---先登录=添加指定商品id ==添加购物车结果，查询购物车内数据，对比前后结果；
         # 接口登录操作
         result = login(username, password)
         assert result.success is True
@@ -49,13 +50,12 @@ class TestUser:
         # 购物车添加需要用到token
         token = result.body['token']
         # 购物车函数传参
-        params = base_data.read_data()['shopping_cart']
+        params = base_data.read_data()['shopping_cart']  # 添加的商品ID
         #购物车添加结果
         result = add_shopping_cart(params, token)
         # 查询购物车内商品数量
         num = get_shop_cart_num(username, params['goods'])
         assert result.success is True
-
         assert result.body['nums'] == num
 
 

@@ -20,4 +20,14 @@ def delete_code(mobile):
     logger.info(f'sql执行结果：{result}')
 
 #查询uid
+def get_userid(mobile):
+    sql = "select id from users_userprofile where mobile= '%s';" % mobile
+    result = db.select_db_one(sql)
+    return result['id']
+
 #查询uuid
+def get_shop_cart_num(username,goods_id):
+    id = get_userid(username)
+    sql = "select nums from trade_shoppingcart where user_id = %d and goods_id = %d" % (id, goods_id)
+    result = db.select_db_one(sql)
+    return result['nums']
