@@ -10,6 +10,6 @@ def process_response(response):
         ResultResponse.body = response.json()
     else:
         ResultResponse.success = False
-        logger.info("接口状态码不是2开头，请检查")
+        # logger.info("接口状态码不是2开头，请检查" + response.status_code)
     logger.info("接口的返回内容>>>：" + json.dumps(response.json(), ensure_ascii=False))
     return ResultResponse
