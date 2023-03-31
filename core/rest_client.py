@@ -6,9 +6,7 @@ api_root_url = base_data.read_ini()['host']['api_sit_url']
 
 
 
-# request封装接口，主要封装场景的http方法如get, post put ,delete , update
-# 封装请求日志请求参数，请求类型和返回信息的报
-
+# 获取api_util文件传入，返回对应的get地址和响应结果
 
 class RestClient:
     def __init__(self):
