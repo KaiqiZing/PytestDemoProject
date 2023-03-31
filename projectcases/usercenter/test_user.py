@@ -45,7 +45,7 @@ class TestUser:
         # 接口登录操作
         result = login(username, password)
         assert result.success is True
-        assert  result.body['token'] is not None
+        assert result.body['token'] is not None
 
         # 购物车添加需要用到token
         token = result.body['token']

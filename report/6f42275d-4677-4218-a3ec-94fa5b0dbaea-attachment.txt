@@ -1,0 +1,23 @@
+INFO     log:mysql_util.py:47 执行sql：delete from users_verifycode where mobile = '15000000000';
+INFO     log:conftest.py:20 sql执行结果：None
+INFO     log:rest_client.py:47 接口请求的地址>>>http://admin.5istudy.online/code/
+INFO     log:rest_client.py:48 接口请求的方法>>>POST
+INFO     log:rest_client.py:52 接口请求的json参数>>>
+{
+  "mobile": 15000000000
+}
+INFO     log:response_util.py:14 接口的返回内容>>>：{"mobile": "15000000000"}
+INFO     log:mysql_util.py:29 执行sql：select code from users_verifycode where mobile = '15000000000' order by id desc limit 1
+INFO     log:mysql_util.py:33 sql执行结果：{'code': '6952'}
+INFO     log:conftest.py:8 sql执行结果：{'code': '6952'}
+INFO     log:rest_client.py:47 接口请求的地址>>>http://admin.5istudy.online/users/
+INFO     log:rest_client.py:48 接口请求的方法>>>POST
+INFO     log:rest_client.py:52 接口请求的json参数>>>
+{
+  "code": "6952",
+  "password": "123456",
+  "username": "15000000000"
+}
+INFO     log:response_util.py:14 接口的返回内容>>>：{"username": "15000000000", "mobile": "15000000000", "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxNjI0MzEsInVzZXJuYW1lIjoiMTUwMDAwMDAwMDAiLCJleHAiOjE2Njc2NDY0NDEsImVtYWlsIjpudWxsfQ.BB15Dw7O-s1aDYAommTVbylhNvrSp0FoBqbazHlnEKM", "name": "15000000000"}
+INFO     log:mysql_util.py:47 执行sql：delete from users_userprofile where mobile = '15000000000';
+INFO     log:conftest.py:15 sql执行结果：None

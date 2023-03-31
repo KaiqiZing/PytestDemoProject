@@ -1,0 +1,1 @@
+[{"name":"Jenkins","type":"jenkins","url":"http://127.0.0.1:8080/zhangjenkins/","buildOrder":93,"buildName":"pytest_project_demo #93","buildUrl":"http://127.0.0.1:8080/zhangjenkins/job/pytest_project_demo/93/","reportName":"AllureReport","reportUrl":"http://127.0.0.1:8080/zhangjenkins/job/pytest_project_demo/93/allure"}]

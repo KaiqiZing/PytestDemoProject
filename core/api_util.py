@@ -35,4 +35,9 @@ class Api(RestClient):
     def banner(self, **kwargs):
         return self.get("/banners/", **kwargs)
 
+    def elamin(self, **kwargs):
+        return self.get("/auth/info/", **kwargs)
+
+    def elamin_usercenter(self, **kwargs):
+        return self.put("/api/users/center/", **kwargs)
 api_utils = Api()

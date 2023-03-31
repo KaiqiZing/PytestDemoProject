@@ -1,0 +1,23 @@
+[2022-10-29 18:30:31,144][mysql_util.py 47][INFO]: 执行sql：delete from users_verifycode where mobile = '15000000000';
+[2022-10-29 18:30:31,181][conftest.py 20][INFO]: sql执行结果：None
+[2022-10-29 18:30:31,181][rest_client.py 47][INFO]: 接口请求的地址>>>http://admin.5istudy.online/code/
+[2022-10-29 18:30:31,181][rest_client.py 48][INFO]: 接口请求的方法>>>POST
+[2022-10-29 18:30:31,182][rest_client.py 52][INFO]: 接口请求的json参数>>>
+{
+  "mobile": 15000000000
+}
+[2022-10-29 18:30:31,244][response_util.py 14][INFO]: 接口的返回内容>>>：{"mobile": "15000000000"}
+[2022-10-29 18:30:31,244][mysql_util.py 29][INFO]: 执行sql：select code from users_verifycode where mobile = '15000000000' order by id desc limit 1
+[2022-10-29 18:30:31,265][mysql_util.py 33][INFO]: sql执行结果：{'code': '2598'}
+[2022-10-29 18:30:31,266][conftest.py 8][INFO]: sql执行结果：{'code': '2598'}
+[2022-10-29 18:30:31,266][rest_client.py 47][INFO]: 接口请求的地址>>>http://admin.5istudy.online/users/
+[2022-10-29 18:30:31,266][rest_client.py 48][INFO]: 接口请求的方法>>>POST
+[2022-10-29 18:30:31,266][rest_client.py 52][INFO]: 接口请求的json参数>>>
+{
+  "code": "2598",
+  "password": "123456",
+  "username": "15000000000"
+}
+[2022-10-29 18:30:31,386][response_util.py 14][INFO]: 接口的返回内容>>>：{"username": "15000000000", "mobile": "15000000000", "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxNjI0MjYsInVzZXJuYW1lIjoiMTUwMDAwMDAwMDAiLCJleHAiOjE2Njc2NDQyMzEsImVtYWlsIjpudWxsfQ.dihw6P4S0hTXyhje8WjDLrFabVw-aJ__xnU-TLzNDoU", "name": "15000000000"}
+[2022-10-29 18:30:31,387][mysql_util.py 47][INFO]: 执行sql：delete from users_userprofile where mobile = '15000000000';
+[2022-10-29 18:30:31,466][conftest.py 15][INFO]: sql执行结果：None

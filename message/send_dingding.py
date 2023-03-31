@@ -1,8 +1,9 @@
 import os
 from jenkins import Jenkins
 import requests
-class JenkinsContest:
 
+
+class JenkinsContest:
     def __init__(self):
         # jenkins的IP地址
         self.jenkins_url = "http://127.0.0.1:8080/"
@@ -18,7 +19,6 @@ class JenkinsContest:
         return result_job, jobs_name, job_name, job_url, job_last_number, report_url
 
 class Send_DingTalk(JenkinsContest):
-
     def __init__(self):
         super().__init__()
         self.result_job, self.jobs_name, self.job_name, self.job_url, self.job_last_number, self.report_url = self.jenkins_content_info()

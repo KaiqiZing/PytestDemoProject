@@ -1,0 +1,8 @@
+[2022-10-28 23:13:43,687][rest_client.py 47][INFO]: 接口请求的地址>>>http://admin.5istudy.online/login/
+[2022-10-28 23:13:43,687][rest_client.py 48][INFO]: 接口请求的方法>>>POST
+[2022-10-28 23:13:43,687][rest_client.py 52][INFO]: 接口请求的json参数>>>
+{
+  "username": 15000000002,
+  "password": 123456
+}
+[2022-10-28 23:13:43,852][response_util.py 14][INFO]: 接口的返回内容>>>：{"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxNTkyOTYsInVzZXJuYW1lIjoiMTUwMDAwMDAwMDIiLCJleHAiOjE2Njc1NzQ4MjMsImVtYWlsIjpudWxsfQ.J_zu67NGA0hTdtob5fyfVeyOsvtpXgHio31bgyMq4ds"}

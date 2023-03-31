@@ -21,3 +21,6 @@ class FileRead:
 
 
 base_data = FileRead()
+data = base_data.read_ini()['Jenkins']
+print(data)
+print(data['jenkins_url'])

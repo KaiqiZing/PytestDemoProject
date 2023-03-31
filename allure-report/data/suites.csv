@@ -1,0 +1,5 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Sat Oct 29 19:07:21 CST 2022","Sat Oct 29 19:07:21 CST 2022","256","projectcases.usercenter","test_user","TestUser","","","测试用例--购物车添加",""
+"passed","Sat Oct 29 19:07:21 CST 2022","Sat Oct 29 19:07:21 CST 2022","295","projectcases.usercenter","test_user","TestUser","","","测试用例--注册手机号码",""
+"passed","Sat Oct 29 19:07:21 CST 2022","Sat Oct 29 19:07:21 CST 2022","44","projectcases.goodscenter","test_goods","TestUser","","","测试用例--首页内容",""
+"passed","Sat Oct 29 19:07:21 CST 2022","Sat Oct 29 19:07:21 CST 2022","161","projectcases.usercenter","test_user","TestUser","","","测试用例--用户登录",""
