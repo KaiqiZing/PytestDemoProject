@@ -5,7 +5,14 @@ from api.user_api import send_code, register, login, add_shopping_cart
 from projectcases.usercenter.conftest import delete_code, get_code, delete_user, get_shop_cart_num
 from utils.read import base_data
 
-
+"""
+全流程测试：
+1、先使用随机手机号码进行注册，返回验证码，使用验证码和手机号发送数据，对响应结果和数据库落表的验证码进行一致性校验
+2、使用手机号码和密码进行登录，并返回token；
+3、通过商品ID获取到数据库中对应商品的库存及其他信息；
+4、头部携带token和需要操作的参数；
+5、对比返回的状态和库存数与数据库中是否保持一致 即可；
+"""
 @allure.feature("用户中心模块")
 class TestUser:
     @allure.story("用户注册后登录")
@@ -25,7 +32,6 @@ class TestUser:
         assert register_result.success is True
         # 删除用户
         delete_user(mobile)
-
 
     @pytest.mark.parametrize("username, password", base_data.read_data()['user_login'])
     @allure.story("用户登录")
@@ -57,5 +63,14 @@ class TestUser:
         num = get_shop_cart_num(username, params['goods'])
         assert result.success is True
         assert result.body['nums'] == num
+
+
+
+        tokens = result.body("token")
+        inputParam = base_data.read_data()
+        shoopingResult = add_shopping_cart(inputParam, tokens)
+        assert shoopingResult.success is True
+        shoopingNum = get_shop_cart_num(username, inputParam['goods'])
+        assert shoopingResult.body["nums"]  == shoopingNum
 
 
